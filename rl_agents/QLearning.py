@@ -79,8 +79,9 @@ class QLearningAgent(RLAgent):
                 done = result[2]
 
                 best_next_action = np.max(self.Q[next_state])
-                self.Q[state, action] += self.alpha * (
-                            reward + self.discount_rate * best_next_action - self.Q[state, action])
+                TD = reward + self.discount_rate * best_next_action - self.Q[state, action]
+
+                self.Q[state, action] += self.alpha * TD
 
 
                 state = next_state
