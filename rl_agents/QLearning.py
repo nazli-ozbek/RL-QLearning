@@ -1,7 +1,7 @@
 """
-    Name:
-    Surname:
-    Student ID:
+    Name: Nazlı Çiçek
+    Surname: Özbek
+    Student ID: S034504
 """
 
 from Environment import Environment
